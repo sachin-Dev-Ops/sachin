@@ -20,7 +20,7 @@ phases:
       - aws cloudformation package --template-file sample.yaml --output-template-file sample-transformed.yaml --s3-bucket $SAM_BUCKET
       - |-
         echo "{ \"Parameters\" : { \"MasterSecretArn\" : \"$SECRET_ARN_DEV\", \"Stage\" : \"dev\" } }" > sample-configuration-dev.json
-        echo "{ \"Parameters\" : { \"MasterSecretArn\" : \"$SECRET_ARN_PROD\", \"MasterSecretsManagerKey\" : \"$SECRET_MANAGER_KEY\", \"Stage\" : \"prod\" } }" > sample-configuration-prod.json
+        echo "{ \"Parameters\" : { \"MasterSecretArn\" : \"$SECRET_ARN_PROD\", \"Stage\" : \"prod\" } }" > sample-configuration-prod.json
 artifacts:
   files:
     - sample-transformed.yaml
