@@ -68,10 +68,7 @@ Resources:
             Action:
               - secretsmanager:GetSecretValue
             Resource: !Ref MasterSecretArn
-          - Effect: Allow
-            Action:
-              - kms:Decrypt
-            Resource: !Ref MasterSecretsManagerKey
+          
 
   SampleDDbTable:
     Type: AWS::Serverless::SimpleTable
