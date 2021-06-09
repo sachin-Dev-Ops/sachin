@@ -86,6 +86,9 @@ Outputs:
   SampleApiUrl:
     Value: !Sub ${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/${ServerlessRestApiProdStage}
     Description: API Gateway URL that triggers your Lambda
-  SampleTableName:
+ SampleApiUrl:
+    Value: !Sub ${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/${ServerlessRestApiProdStage}
+    Description: API Gateway URL that triggers your Lambda
+SampleTableName:
     Value: !Ref SampleDDbTable
     Description: DynamoDB Table name that is passed into the Lambda environment variables
